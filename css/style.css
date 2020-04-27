@@ -1,0 +1,125 @@
+:root{
+    --text-primary:rgb(255, 255, 255);
+    --text-secondary:rgb(0, 0, 0);
+    --bg-primary:rgb(40, 178, 247);
+    --bg-primary-hover: rgb(37, 152, 209);
+    --bg-secondary: rgb(247, 40, 40);
+    --bg-secondary-hover: rgb(209, 37, 37);
+    --bg-input: rgb(218, 218, 218);
+    --bg-input-hover: rgb(92, 92, 92);
+}
+body{
+    height: 100vh;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Roboto', sans-serif;
+}
+body::-webkit-scrollbar{
+    width: 5px;
+}
+body::-webkit-scrollbar-track{
+    background: var(--text-primary); /*XD*/
+}
+body::-webkit-scrollbar-thumb{
+    background: var(--bg-input-hover); /*XD*/
+}
+.app{
+    display: grid;
+    grid-template-rows: 140px 35px 1fr;
+}
+.titulo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  z-index: 100;
+}
+.saveNote{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.saveNote input{
+    background: var(--bg-input);
+    border: none;
+    width: 400px;
+    height: 35px;
+    border-radius: 20px;
+    padding-left: 20px;
+}
+.saveNote input:focus{
+    border: none;
+}
+.saveNote button{
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    border-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -34px;
+}
+.saveNote button:hover{
+    background: var(--bg-input-hover);
+    color: var(--text-primary);
+}
+.mostrarNota{
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+.mostrarNota ul{
+    list-style: none;
+}
+.colorNotaTrue{
+    background: var(--bg-primary);
+}
+.colorNotaTrue:hover{
+    background: var(--bg-primary-hover);
+    
+}
+.colorNotaFalse{
+    background: var(--bg-secondary);
+}
+.colorNotaFalse:hover{
+    background: var(--bg-secondary-hover);
+    
+}
+.nota{
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    width: 550px;
+    min-height: 50px;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 275px;
+}
+.notaButton{
+    width: 70px;
+    height: auto;
+    display: flex; 
+    justify-content: space-between;
+}
+.btn{
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    border-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn:hover{
+    background: var(--bg-input-hover);
+    color: var(--text-primary);
+}
+.notaInfo span{
+    font-weight: bold; 
+    margin-right: 20px;
+}
+.notaInfo{
+    color: var(--text-primary);
+}

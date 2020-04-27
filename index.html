@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+
+<div id="app" class="app">
+    <div class="titulo">
+        <h1>{{titulo}}</h1>
+    </div>
+    <div class="saveNote">
+        <input type="text" placeholder="New note..." v-model="newNota" @keyup.enter="agregarNota">
+        <button @click="agregarNota"><i class="material-icons">add</i></button>
+    </div>
+    <div class="mostrarNota">
+        <ul>
+            <li v-for="(nota, index) of notas">
+                <div class="nota" :class="{'colorNotaTrue':nota.estado,'colorNotaFalse':!nota.estado}">
+                    <div class="notaInfo">
+                        <span>{{index+1}}</span>{{nota.nombre}}
+                    </div>
+                    <div class="notaButton">
+                        <button class="btn" @click="cambiarEstado(index)"><i class="material-icons">done</i></button>
+                        <button class="btn" @click="eliminarNota(index)"><i class="material-icons">clear</i></button>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+    <script src="./js/app.js"></script>
+</body>
+</html>
